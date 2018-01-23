@@ -40,7 +40,13 @@ public class LoginController extends BaseController {
 
     @Autowired
     UserMapper userMapper;
-
+    /**
+     * 跳转到主页
+     */
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    public String portalIndex() {
+        return "/portal/index.html";
+    }
     /**
      * 跳转到主页
      */
