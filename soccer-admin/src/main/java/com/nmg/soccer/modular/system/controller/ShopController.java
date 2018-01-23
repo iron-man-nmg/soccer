@@ -12,13 +12,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author stone
  */
 @Controller
+@RequestMapping("/shop")
 public class ShopController extends BaseController {
 
 	/**
 	 * 跳转到主页
 	 */
-	@RequestMapping(value = "/shop", method = RequestMethod.GET)
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String shopIndex(Model model) {
 		return "/portal/index-shop.html";
+	}
+	
+	/**
+	 * 商品详情
+	 */
+	@RequestMapping(value = "/goods", method = RequestMethod.GET)
+	public String goodsDetail(Model model) {
+		return "/shop/shop-product.html";
 	}
 }
