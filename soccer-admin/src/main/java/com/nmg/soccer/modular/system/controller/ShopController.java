@@ -20,7 +20,7 @@ public class ShopController extends BaseController {
 	 */
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String shopIndex(Model model) {
-		return "/portal/index-shop.html";
+		return "/shop/index-shop.html";
 	}
 	
 	/**
